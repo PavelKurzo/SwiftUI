@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A87B9C4728C7858800360A34 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9C4628C7858800360A34 /* FeaturedItem.swift */; };
+		A87B9C4928C7868800360A34 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9C4828C7868800360A34 /* NavigationBar.swift */; };
 		A894102828C0A85300E48929 /* DesignCodeIOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894102728C0A85300E48929 /* DesignCodeIOS15App.swift */; };
 		A894102A28C0A85300E48929 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894102928C0A85300E48929 /* ContentView.swift */; };
 		A894102C28C0A85400E48929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A894102B28C0A85400E48929 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A87B9C4628C7858800360A34 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
+		A87B9C4828C7868800360A34 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		A894102428C0A85300E48929 /* DesignCodeIOS15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeIOS15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A894102728C0A85300E48929 /* DesignCodeIOS15App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeIOS15App.swift; sourceTree = "<group>"; };
 		A894102928C0A85300E48929 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 			children = (
 				A8CFE50A28C245F400E96FFC /* TabBar.swift */,
 				A894102928C0A85300E48929 /* ContentView.swift */,
+				A87B9C4828C7868800360A34 /* NavigationBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			children = (
 				A8CFE50628C1E36600E96FFC /* HexagonView.swift */,
 				A8CFE50828C1EB3100E96FFC /* BlobView.swift */,
+				A87B9C4628C7858800360A34 /* FeaturedItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -203,9 +209,11 @@
 				A8CFE50728C1E36600E96FFC /* HexagonView.swift in Sources */,
 				A894103628C0E2C500E48929 /* Styles.swift in Sources */,
 				A8CFE50D28C24ABF00E96FFC /* Tab.swift in Sources */,
+				A87B9C4928C7868800360A34 /* NavigationBar.swift in Sources */,
 				A8CFE50928C1EB3100E96FFC /* BlobView.swift in Sources */,
 				A894102A28C0A85300E48929 /* ContentView.swift in Sources */,
 				A894102828C0A85300E48929 /* DesignCodeIOS15App.swift in Sources */,
+				A87B9C4728C7858800360A34 /* FeaturedItem.swift in Sources */,
 				A8CFE50B28C245F400E96FFC /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
