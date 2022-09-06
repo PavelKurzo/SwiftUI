@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A8034C4928C78EE100FF3959 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C4828C78EE100FF3959 /* PreferenceKeys.swift */; };
 		A8034C4B28C7999400FF3959 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C4A28C7999400FF3959 /* AnimatableFontModifier.swift */; };
+		A8034C4D28C79F1B00FF3959 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C4C28C79F1B00FF3959 /* Course.swift */; };
 		A87B9C4728C7858800360A34 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9C4628C7858800360A34 /* FeaturedItem.swift */; };
 		A87B9C4928C7868800360A34 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9C4828C7868800360A34 /* NavigationBar.swift */; };
 		A894102828C0A85300E48929 /* DesignCodeIOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894102728C0A85300E48929 /* DesignCodeIOS15App.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		A8034C4828C78EE100FF3959 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		A8034C4A28C7999400FF3959 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
+		A8034C4C28C79F1B00FF3959 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		A87B9C4628C7858800360A34 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		A87B9C4828C7868800360A34 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		A894102428C0A85300E48929 /* DesignCodeIOS15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeIOS15.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 			children = (
 				A8CFE50C28C24ABF00E96FFC /* Tab.swift */,
 				A8034C4828C78EE100FF3959 /* PreferenceKeys.swift */,
+				A8034C4C28C79F1B00FF3959 /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				A87B9C4928C7868800360A34 /* NavigationBar.swift in Sources */,
 				A8CFE50928C1EB3100E96FFC /* BlobView.swift in Sources */,
 				A894102A28C0A85300E48929 /* ContentView.swift in Sources */,
+				A8034C4D28C79F1B00FF3959 /* Course.swift in Sources */,
 				A894102828C0A85300E48929 /* DesignCodeIOS15App.swift in Sources */,
 				A87B9C4728C7858800360A34 /* FeaturedItem.swift in Sources */,
 				A8034C4928C78EE100FF3959 /* PreferenceKeys.swift in Sources */,
