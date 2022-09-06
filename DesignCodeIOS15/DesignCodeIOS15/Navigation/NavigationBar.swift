@@ -19,6 +19,7 @@ struct NavigationBar: View {
                 .opacity(hasScrolled ? 1 : 0)
             
             Text(title)
+                .animatableFont(size: hasScrolled ? 22 : 34, weight: .bold)
                 .font(.largeTitle.weight(.bold))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 20)
