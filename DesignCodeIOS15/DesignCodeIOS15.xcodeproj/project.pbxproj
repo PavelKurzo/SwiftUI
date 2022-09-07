@@ -11,6 +11,8 @@
 		A8034C4B28C7999400FF3959 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C4A28C7999400FF3959 /* AnimatableFontModifier.swift */; };
 		A8034C4D28C79F1B00FF3959 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C4C28C79F1B00FF3959 /* Course.swift */; };
 		A8034C4F28C87E2000FF3959 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C4E28C87E2000FF3959 /* MatchedView.swift */; };
+		A8034C5328C899F700FF3959 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C5228C899F700FF3959 /* CourseItem.swift */; };
+		A8034C5528C89BA000FF3959 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C5428C89BA000FF3959 /* CourseView.swift */; };
 		A87B9C4728C7858800360A34 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9C4628C7858800360A34 /* FeaturedItem.swift */; };
 		A87B9C4928C7868800360A34 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9C4828C7868800360A34 /* NavigationBar.swift */; };
 		A894102828C0A85300E48929 /* DesignCodeIOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894102728C0A85300E48929 /* DesignCodeIOS15App.swift */; };
@@ -31,6 +33,8 @@
 		A8034C4A28C7999400FF3959 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 		A8034C4C28C79F1B00FF3959 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		A8034C4E28C87E2000FF3959 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
+		A8034C5228C899F700FF3959 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
+		A8034C5428C89BA000FF3959 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		A87B9C4628C7858800360A34 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		A87B9C4828C7868800360A34 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		A894102428C0A85300E48929 /* DesignCodeIOS15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeIOS15.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,7 @@
 				A8CFE50E28C4CA7A00E96FFC /* HomeView.swift */,
 				A894103728C0F5E400E48929 /* AccountView.swift */,
 				A8034C4E28C87E2000FF3959 /* MatchedView.swift */,
+				A8034C5428C89BA000FF3959 /* CourseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				A8CFE50628C1E36600E96FFC /* HexagonView.swift */,
 				A8CFE50828C1EB3100E96FFC /* BlobView.swift */,
 				A87B9C4628C7858800360A34 /* FeaturedItem.swift */,
+				A8034C5228C899F700FF3959 /* CourseItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			files = (
 				A8CFE50F28C4CA7A00E96FFC /* HomeView.swift in Sources */,
 				A894103828C0F5E400E48929 /* AccountView.swift in Sources */,
+				A8034C5528C89BA000FF3959 /* CourseView.swift in Sources */,
 				A8CFE50728C1E36600E96FFC /* HexagonView.swift in Sources */,
 				A894103628C0E2C500E48929 /* Styles.swift in Sources */,
 				A8034C4F28C87E2000FF3959 /* MatchedView.swift in Sources */,
@@ -227,6 +234,7 @@
 				A894102A28C0A85300E48929 /* ContentView.swift in Sources */,
 				A8034C4D28C79F1B00FF3959 /* Course.swift in Sources */,
 				A894102828C0A85300E48929 /* DesignCodeIOS15App.swift in Sources */,
+				A8034C5328C899F700FF3959 /* CourseItem.swift in Sources */,
 				A87B9C4728C7858800360A34 /* FeaturedItem.swift in Sources */,
 				A8034C4928C78EE100FF3959 /* PreferenceKeys.swift in Sources */,
 				A8CFE50B28C245F400E96FFC /* TabBar.swift in Sources */,
