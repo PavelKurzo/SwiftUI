@@ -13,6 +13,7 @@ struct CourseView: View {
     @Binding var show: Bool
     @State var appear = [false, false, false]
     @EnvironmentObject var model : Model
+    @State var viewState: CGSize = .zero
     
     var body: some View {
         ZStack {
@@ -25,6 +26,23 @@ struct CourseView: View {
                     .opacity(appear[2] ? 1 : 0)
             }
             .background(Color("Background"))
+            .mask(RoundedRectangle(cornerRadius: viewState.width / 3, style: .continuous))
+            .shadow(color: .black.opacity(0.3), radius: 30, x: 0, y: 10)
+            .scaleEffect(viewState.width / -500 + 1)
+            .background(.black.opacity(viewState.width / 500))
+            .background(.ultraThinMaterial)
+            .gesture(
+                DragGesture().onChanged { value in
+                    guard  value.translation.width > 0 else { return }
+                    
+                    viewState = value.translation
+                }
+                    .onEnded { value in
+                        withAnimation(.closeCard) {
+                        viewState = .zero
+                        }
+                    }
+            )
             .ignoresSafeArea()
             
             button
@@ -33,7 +51,7 @@ struct CourseView: View {
             fadeIn()
         }
         .onChange(of: show) { newValue in
-           fadeOut()
+            fadeOut()
         }
     }
     
@@ -53,7 +71,7 @@ struct CourseView: View {
                     .aspectRatio(contentMode: .fit)
                     .matchedGeometryEffect(id: "image\(course.id)", in: namespace)
                     .offset(y: scrollY > 0 ? scrollY * -0.8 : 0)
-
+                
             )
             .background(
                 Image(course.background)
@@ -67,13 +85,13 @@ struct CourseView: View {
             .mask (
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
                     .matchedGeometryEffect(id: "mask\(course.id)", in: namespace)                    .offset(y: scrollY > 0 ? -scrollY : 0)
-
+                
             )
             .overlay(
                 overlayContent
                     .offset(y: scrollY > 0 ? scrollY * -0.6 : 0)
-
-        )
+                
+            )
         }
         .frame(height: 500)
     }
@@ -98,7 +116,7 @@ struct CourseView: View {
             withAnimation(.closeCard) {
                 show.toggle()
                 model.showDetail.toggle()
-                    
+                
             }
         } label: {
             Image(systemName: "xmark")
@@ -113,41 +131,41 @@ struct CourseView: View {
     }
     
     var overlayContent: some View {
-            VStack(alignment: .leading, spacing: 12) {
-                Text(course.title)
-                    .font(.largeTitle.weight(.bold))
-                    .matchedGeometryEffect(id: "title\(course.id)", in: namespace)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Text(course.subtitle.uppercased())
-                    .font(.footnote.weight(.semibold))
-                    .matchedGeometryEffect(id: "subtitle\(course.id)", in: namespace)
-                Text(course.text)
+        VStack(alignment: .leading, spacing: 12) {
+            Text(course.title)
+                .font(.largeTitle.weight(.bold))
+                .matchedGeometryEffect(id: "title\(course.id)", in: namespace)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Text(course.subtitle.uppercased())
+                .font(.footnote.weight(.semibold))
+                .matchedGeometryEffect(id: "subtitle\(course.id)", in: namespace)
+            Text(course.text)
+                .font(.footnote)
+                .matchedGeometryEffect(id: "text\(course.id)", in: namespace)
+            Divider()
+                .opacity(appear[0] ? 1 : 0)
+            HStack {
+                Image("Avatar Default")
+                    .resizable()
+                    .frame(width: 26, height: 26)
+                    .cornerRadius(10)
+                    .padding(8)
+                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                    .strokeStyle(cornerRadius: 18)
+                Text("Taught by Meng To")
                     .font(.footnote)
-                    .matchedGeometryEffect(id: "text\(course.id)", in: namespace)
-                Divider()
-                    .opacity(appear[0] ? 1 : 0)
-                HStack {
-                    Image("Avatar Default")
-                        .resizable()
-                        .frame(width: 26, height: 26)
-                        .cornerRadius(10)
-                        .padding(8)
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                        .strokeStyle(cornerRadius: 18)
-                    Text("Taught by Meng To")
-                        .font(.footnote)
-                }
-                .opacity(appear[1] ? 1 : 0)
             }
-                .padding(20)
-                .background(
-                    Rectangle()
-                        .fill(.ultraThinMaterial)
-                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                        .matchedGeometryEffect(id: "blur\(course.id)", in: namespace)
-                )
-                .offset(y: 250)
-                .padding(20)
+            .opacity(appear[1] ? 1 : 0)
+        }
+        .padding(20)
+        .background(
+            Rectangle()
+                .fill(.ultraThinMaterial)
+                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                .matchedGeometryEffect(id: "blur\(course.id)", in: namespace)
+        )
+        .offset(y: 250)
+        .padding(20)
     }
     
     func fadeIn() {
