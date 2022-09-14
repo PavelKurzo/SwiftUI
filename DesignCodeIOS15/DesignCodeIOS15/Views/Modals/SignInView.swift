@@ -16,7 +16,7 @@ struct SignInView: View {
     @State var email = ""
     @State var password = ""
     @FocusState var focusedField: Field?
-    @State var circleY: CGFloat = 120
+    @State var circleY: CGFloat = 0
     @State var emailY: CGFloat = 0
     @State var passwordY: CGFloat = 0
     @State var circleColor: Color = .blue
@@ -24,9 +24,8 @@ struct SignInView: View {
     @EnvironmentObject var model: Model
     
     var body: some View {
-        
         VStack(alignment: .leading, spacing: 16) {
-            Text("Sign In")
+            Text("Sign in")
                 .font(.largeTitle).bold()
                 .opacity(appear[0] ? 1 : 0)
                 .offset(y: appear[0] ? 0 : 20)
@@ -34,6 +33,7 @@ struct SignInView: View {
                 .font(.headline)
                 .opacity(appear[1] ? 1 : 0)
                 .offset(y: appear[1] ? 0 : 20)
+            
             Group {
                 TextField("Email", text: $email)
                     .inputStyle(icon: "mail")
@@ -48,18 +48,17 @@ struct SignInView: View {
                         emailY = value
                         circleY = value
                     }
-                SecureField("Passowrd", text: $password)
+                SecureField("Password", text: $password)
                     .inputStyle(icon: "lock")
                     .textContentType(.password)
                     .focused($focusedField, equals: .password)
                     .shadow(color: focusedField == .password ? .primary.opacity(0.3) : .clear, radius: 10, x: 0, y: 3)
                     .overlay(geometry)
-                    .onPreferenceChange(CirclePreferenceKey.self) {
-                        value in
-                        passwordY = value
+                    .onPreferenceChange(CirclePreferenceKey.self) { value in
+                        passwordY =  value
                     }
                 Button {} label: {
-                    Text("Sign In")
+                    Text("Sign in")
                         .frame(maxWidth: .infinity)
                 }
                 .font(.headline)
@@ -83,7 +82,6 @@ struct SignInView: View {
                 .foregroundColor(.secondary)
                 .accentColor(.secondary)
             }
-            
             .opacity(appear[2] ? 1 : 0)
             .offset(y: appear[2] ? 0 : 20)
         }
@@ -120,6 +118,7 @@ struct SignInView: View {
             }
         }
     }
+    
     var geometry: some View {
         GeometryReader { proxy in
             Color.clear.preference(key: CirclePreferenceKey.self, value: proxy.frame(in: .named("container")).minY)

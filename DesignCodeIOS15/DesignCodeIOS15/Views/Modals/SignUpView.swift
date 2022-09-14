@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct SignUpView: View {
     enum Field: Hashable {
         case email
@@ -16,16 +18,15 @@ struct SignUpView: View {
     @State var email = ""
     @State var password = ""
     @FocusState var focusedField: Field?
-    @State var circleY: CGFloat = 120
+    @State var circleY: CGFloat = 0
     @State var emailY: CGFloat = 0
     @State var passwordY: CGFloat = 0
     @State var circleColor: Color = .blue
     @EnvironmentObject var model: Model
     
     var body: some View {
-        
         VStack(alignment: .leading, spacing: 16) {
-            Text("Sign Up")
+            Text("Sign up")
                 .font(.largeTitle).bold()
             Text("Access 120+ hours of courses, tutorials and livestreams")
                 .font(.headline)
@@ -42,15 +43,14 @@ struct SignUpView: View {
                     emailY = value
                     circleY = value
                 }
-            SecureField("Passowrd", text: $password)
+            SecureField("Password", text: $password)
                 .inputStyle(icon: "lock")
                 .textContentType(.password)
                 .focused($focusedField, equals: .password)
                 .shadow(color: focusedField == .password ? .primary.opacity(0.3) : .clear, radius: 10, x: 0, y: 3)
                 .overlay(geometry)
-                .onPreferenceChange(CirclePreferenceKey.self) {
-                    value in
-                    passwordY = value
+                .onPreferenceChange(CirclePreferenceKey.self) { value in
+                    passwordY =  value
                 }
             Button {} label: {
                 Text("Create an account")
@@ -64,14 +64,14 @@ struct SignUpView: View {
             .shadow(color: Color("Shadow").opacity(0.2), radius: 30, x: 0, y: 30)
             
             Group {
-                Text("By clicking on ").foregroundColor(.primary.opacity(0.7))
-                + Text("_Create an account_")
+                Text("By clicking on ")
+                + Text("_Create an account_").foregroundColor(.primary.opacity(0.7))
                 + Text(", you agree to our **Terms of Service** and **[Privacy Policy](https://designcode.io)**")
                 
                 Divider()
                 
                 HStack {
-                    Text("ALready have an account?")
+                    Text("Already have an account?")
                     Button {
                         model.selectedModal = .signIn
                     } label: {
@@ -105,6 +105,7 @@ struct SignUpView: View {
             }
         }
     }
+    
     var geometry: some View {
         GeometryReader { proxy in
             Color.clear.preference(key: CirclePreferenceKey.self, value: proxy.frame(in: .named("container")).minY)

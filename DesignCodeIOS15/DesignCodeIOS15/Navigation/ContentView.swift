@@ -30,10 +30,8 @@ struct ContentView: View {
                 .offset(y: model.showDetail ? 200 : 0)
             
             if showModal {
-                ZStack {
                     ModalView()
                 .zIndex(1)
-                }
             }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {

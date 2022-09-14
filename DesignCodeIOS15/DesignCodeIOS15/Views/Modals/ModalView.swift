@@ -21,6 +21,7 @@ struct ModalView: View {
                     dismissModal()
                 }
                 .ignoresSafeArea()
+            
             Group {
                 switch model.selectedModal {
                 case .signUp: SignUpView()
@@ -45,14 +46,15 @@ struct ModalView: View {
                     .blur(radius: appear[2] ? 0 : 40)
                     .allowsHitTesting(false)
             )
+            
             Button {
                 dismissModal()
-                } label: {
+            } label: {
                 Image(systemName: "xmark")
                     .font(.body.weight(.bold))
                     .foregroundColor(.secondary)
                     .padding(8)
-                    .background(.ultraThinMaterial, in: Circle())
+                .background(.ultraThinMaterial, in: Circle())
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
             .padding(20)
@@ -79,7 +81,7 @@ struct ModalView: View {
             }
             .onEnded { value in
                 if value.translation.height > 200 {
-                   dismissModal()
+                    dismissModal()
                 } else {
                     withAnimation(.openCard) {
                         viewState = .zero
