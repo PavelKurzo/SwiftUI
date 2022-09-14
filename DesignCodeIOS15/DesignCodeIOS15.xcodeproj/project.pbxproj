@@ -80,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A84E340928D1FF8900AD0BA2 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				A84E33FF28CF522000AD0BA2 /* SignUpView.swift */,
+				A84E340728D1E9AA00AD0BA2 /* SignInView.swift */,
+				A84E340528D1E94C00AD0BA2 /* ModalView.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
 		A894101B28C0A85300E48929 = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +147,7 @@
 				A8034C4E28C87E2000FF3959 /* MatchedView.swift */,
 				A8034C5428C89BA000FF3959 /* CourseView.swift */,
 				A880D60D28CE16980055B449 /* SearchView.swift */,
-				A84E33FF28CF522000AD0BA2 /* SignUpView.swift */,
-				A84E340728D1E9AA00AD0BA2 /* SignInView.swift */,
-				A84E340528D1E94C00AD0BA2 /* ModalView.swift */,
+				A84E340928D1FF8900AD0BA2 /* Modals */,
 			);
 			path = Views;
 			sourceTree = "<group>";
