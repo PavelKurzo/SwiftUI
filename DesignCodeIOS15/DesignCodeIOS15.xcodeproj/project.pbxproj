@@ -17,6 +17,7 @@
 		A8034C5928C9213200FF3959 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C5828C9213200FF3959 /* Model.swift */; };
 		A84E340028CF522000AD0BA2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E33FF28CF522000AD0BA2 /* SignUpView.swift */; };
 		A84E340228CF641F00AD0BA2 /* AngularButtonsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E340128CF641F00AD0BA2 /* AngularButtonsStyle.swift */; };
+		A84E340428D1DC5300AD0BA2 /* InputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E340328D1DC5300AD0BA2 /* InputStyle.swift */; };
 		A87B9C4728C7858800360A34 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9C4628C7858800360A34 /* FeaturedItem.swift */; };
 		A87B9C4928C7868800360A34 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B9C4828C7868800360A34 /* NavigationBar.swift */; };
 		A880D60E28CE16980055B449 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A880D60D28CE16980055B449 /* SearchView.swift */; };
@@ -45,6 +46,7 @@
 		A8034C5828C9213200FF3959 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A84E33FF28CF522000AD0BA2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A84E340128CF641F00AD0BA2 /* AngularButtonsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngularButtonsStyle.swift; sourceTree = "<group>"; };
+		A84E340328D1DC5300AD0BA2 /* InputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStyle.swift; sourceTree = "<group>"; };
 		A87B9C4628C7858800360A34 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		A87B9C4828C7868800360A34 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		A880D60D28CE16980055B449 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				A8034C4A28C7999400FF3959 /* AnimatableFontModifier.swift */,
 				A8034C5628C8BE0C00FF3959 /* Animations.swift */,
 				A84E340128CF641F00AD0BA2 /* AngularButtonsStyle.swift */,
+				A84E340328D1DC5300AD0BA2 /* InputStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				A8034C5728C8BE0C00FF3959 /* Animations.swift in Sources */,
 				A8034C4928C78EE100FF3959 /* PreferenceKeys.swift in Sources */,
 				A8034C5928C9213200FF3959 /* Model.swift in Sources */,
+				A84E340428D1DC5300AD0BA2 /* InputStyle.swift in Sources */,
 				A8CFE50B28C245F400E96FFC /* TabBar.swift in Sources */,
 				A8034C4B28C7999400FF3959 /* AnimatableFontModifier.swift in Sources */,
 				A84E340228CF641F00AD0BA2 /* AngularButtonsStyle.swift in Sources */,
