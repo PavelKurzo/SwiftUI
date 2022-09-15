@@ -11,9 +11,21 @@ struct AccountView: View {
     
     @State var isDeleted = false
     @State var isPinned = false
+    @State var address: Address = Address(id: 1, country: "Canada")
     @Environment(\.dismiss) var dismiss
     @AppStorage("isLogged") var isLogged = false
-
+    @ObservedObject var coinModel = CoinModel()
+    
+    func fetchADress() async {
+        do {
+            let url = URL(string: "https://random-data-api.com/api/address/random_address")!
+            let (data, _) = try await URLSession.shared.data(from: url)
+            address = try JSONDecoder().decode(Address.self, from: data)
+        } catch {
+            address = Address(id: 1, country: "Error fetching")
+        }
+        
+    }
     
     var body: some View {
         NavigationView {
@@ -24,6 +36,8 @@ struct AccountView: View {
                 
                 links
                 
+                coins
+                
                 Button {
                     isLogged = false
                     dismiss()
@@ -32,6 +46,14 @@ struct AccountView: View {
                 }
                 .tint(.red)
                 
+            }
+            .task {
+                await fetchADress()
+                await coinModel.fetchCoins()
+            }
+            .refreshable {
+                await fetchADress()
+                await coinModel.fetchCoins()
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Account")
@@ -51,12 +73,12 @@ struct AccountView: View {
                 .background(Circle().fill(.ultraThinMaterial))
                 .background(
                     HexagonView()
-                    .offset(x: -50, y: -100)
+                        .offset(x: -50, y: -100)
                 )
                 .background(
-                BlobView()
-                    .offset(x: 200, y: 0)
-                    .scaleEffect(0.6)
+                    BlobView()
+                        .offset(x: 200, y: 0)
+                        .scaleEffect(0.6)
                 )
             
             Text("Meng To")
@@ -64,7 +86,7 @@ struct AccountView: View {
             HStack {
                 Image(systemName: "location")
                     .imageScale(.small)
-                Text("Canada")
+                Text(address.country)
                     .foregroundColor(.secondary)
             }
         }
@@ -119,11 +141,33 @@ struct AccountView: View {
                 }
             }
             .swipeActions {
-                pinButton 
+                pinButton
             }
         }
         .accentColor(.primary)
         .listRowSeparator(.hidden)
+    }
+    
+    var coins: some View {
+        Section(header: Text("Coins")) {
+            ForEach(coinModel.coins) { coin in
+                HStack {
+                    AsyncImage(url: URL(string: coin.logo)) { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: 32, height: 32)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(coin.coin_name)
+                        Text(coin.acronym)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }
+        }
     }
     
     var pinButton: some View {

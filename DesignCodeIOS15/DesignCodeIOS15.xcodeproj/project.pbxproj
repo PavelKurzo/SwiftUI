@@ -16,6 +16,8 @@
 		A8034C5728C8BE0C00FF3959 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C5628C8BE0C00FF3959 /* Animations.swift */; };
 		A8034C5928C9213200FF3959 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8034C5828C9213200FF3959 /* Model.swift */; };
 		A841320C28D226F5009A573A /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841320B28D226F5009A573A /* AvatarView.swift */; };
+		A841320E28D32300009A573A /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841320D28D32300009A573A /* Address.swift */; };
+		A841321028D3265D009A573A /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841320F28D3265D009A573A /* Coin.swift */; };
 		A84E340028CF522000AD0BA2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E33FF28CF522000AD0BA2 /* SignUpView.swift */; };
 		A84E340228CF641F00AD0BA2 /* AngularButtonsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E340128CF641F00AD0BA2 /* AngularButtonsStyle.swift */; };
 		A84E340428D1DC5300AD0BA2 /* InputStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E340328D1DC5300AD0BA2 /* InputStyle.swift */; };
@@ -48,6 +50,8 @@
 		A8034C5628C8BE0C00FF3959 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		A8034C5828C9213200FF3959 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A841320B28D226F5009A573A /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		A841320D28D32300009A573A /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		A841320F28D3265D009A573A /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		A84E33FF28CF522000AD0BA2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A84E340128CF641F00AD0BA2 /* AngularButtonsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngularButtonsStyle.swift; sourceTree = "<group>"; };
 		A84E340328D1DC5300AD0BA2 /* InputStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStyle.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				A8034C4C28C79F1B00FF3959 /* Course.swift */,
 				A8034C5828C9213200FF3959 /* Model.swift */,
 				A880D60F28CE221A0055B449 /* Suggestion.swift */,
+				A841320D28D32300009A573A /* Address.swift */,
+				A841320F28D3265D009A573A /* Coin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				A8034C5528C89BA000FF3959 /* CourseView.swift in Sources */,
 				A8CFE50728C1E36600E96FFC /* HexagonView.swift in Sources */,
 				A880D61028CE221A0055B449 /* Suggestion.swift in Sources */,
+				A841320E28D32300009A573A /* Address.swift in Sources */,
 				A894103628C0E2C500E48929 /* Styles.swift in Sources */,
 				A841320C28D226F5009A573A /* AvatarView.swift in Sources */,
 				A8034C4F28C87E2000FF3959 /* MatchedView.swift in Sources */,
@@ -274,6 +281,7 @@
 				A8CFE50928C1EB3100E96FFC /* BlobView.swift in Sources */,
 				A894102A28C0A85300E48929 /* ContentView.swift in Sources */,
 				A84E340828D1E9AA00AD0BA2 /* SignInView.swift in Sources */,
+				A841321028D3265D009A573A /* Coin.swift in Sources */,
 				A8034C4D28C79F1B00FF3959 /* Course.swift in Sources */,
 				A894102828C0A85300E48929 /* DesignCodeIOS15App.swift in Sources */,
 				A8034C5328C899F700FF3959 /* CourseItem.swift in Sources */,
